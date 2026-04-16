@@ -132,14 +132,16 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="relative border-l pl-3 border-slate-200" id="profile-dropdown-wrap">
-                    <button onclick="toggleProfileDropdown()" class="flex items-center gap-3 hover:opacity-80 transition-all">
-                        <div class="text-right hidden sm:block">
-                            <p class="text-sm font-bold text-slate-900 leading-none">{{ username }}</p>
-                            <p class="text-[10px] font-bold mt-0.5 uppercase" style="color:#00A3B4">Administrator</p>
+                    <button id="profile-btn" onclick="toggleProfileDropdown()" class="flex items-center gap-3 hover:opacity-80 transition-all">
+                        <div class="text-right">
+                            <p id="header-profile-name" class="text-sm font-bold text-slate-900 leading-none">{{ username }}</p>
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mt-1">Administrator</p>
                         </div>
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed={{ username }}" class="w-9 h-9 rounded-full bg-slate-200 border border-slate-200 object-cover">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed={{ username }}" id="header-avatar-img" class="w-9 h-9 rounded-full bg-slate-200 border border-slate-200 object-cover">
                     </button>
+
                     <div id="profile-dropdown" class="hidden absolute right-0 top-14 w-56 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden z-[200]" style="box-shadow:0 8px 40px rgba(0,48,73,.15)">
                         <div class="flex items-center gap-3 px-5 py-4 border-b border-slate-100">
                             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed={{ username }}" class="w-10 h-10 rounded-full bg-slate-100 object-cover border border-slate-100 shrink-0">
@@ -150,6 +152,7 @@
                                 <iconify-icon icon="solar:settings-linear" width="16" class="text-slate-400 shrink-0"></iconify-icon> Settings
                             </button>
                         </div>
+
                         <div class="py-2 border-t border-slate-100">
                             <button onclick="window.location.href='/logout'" class="w-full flex items-center gap-3 px-5 py-3 text-sm font-medium text-red-500 hover:bg-red-50 text-left">
                                 <iconify-icon icon="solar:logout-2-linear" width="16" class="shrink-0"></iconify-icon> Sign Out
