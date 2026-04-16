@@ -260,7 +260,7 @@ document.addEventListener('click', e => {
             window.location.href = '/login';
         }
         
-        // You might also want to include your toggle functions here
+        
         function toggleProfileDropdown() {
             const dropdown = document.getElementById('profile-dropdown');
             dropdown.classList.toggle('hidden');
@@ -272,7 +272,7 @@ document.addEventListener('click', e => {
     </script>
 
     <script>
-    // This triggers the initial view as soon as the scripts are ready
+    
     window.addEventListener('DOMContentLoaded', () => {
         if (typeof navigateTo === 'function') {
             navigateTo('dashboard');
